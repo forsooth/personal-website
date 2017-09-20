@@ -1,0 +1,16 @@
+div.hello {
+        font-family: "Raleway";
+        margin-top: 2.5vh;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        font-weight: 200;
+        font-size: 15em;
+        text-align: center;
+}
+
+span.subtitle {
+        float: left;
+        font-size: 0.1em;
+        width: 100%;
+        font-weight: 300;
+}

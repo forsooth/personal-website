@@ -1,0 +1,130 @@
+.gallery {
+        border: 5px solid #ffe6ca;
+        box-sizing: border-box;
+}
+
+.gallery-inner {
+        display: block;
+        text-align: center;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #807f77;
+
+}
+
+.gallery-inner li {
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+}
+
+.gallery-inner input {
+        display: none;
+}
+
+.gallery-inner label {
+        background-color: #872277;
+        bottom: 10px;
+        border-radius: 100%;
+        cursor: pointer;
+        display: block;
+        height: 2.5vh;
+        width: 2.5vh;
+        left: 0;
+        float: left;
+        text-align: center;
+        opacity: 0;
+        position: absolute;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+        visibility: hidden;
+        z-index: 2;
+
+}
+
+.gallery-inner label:after {
+        border-radius: 100%;
+        box-shadow: inset 0 0 0 3px #872277,
+                    inset 0 3px 3px #872277,
+                    0 1px 1px hsla(0, 0%, 100%, .25);
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        bottom: -2px;
+        right: -2px;
+}
+
+.gallery-inner:hover label {
+        opacity: 1;
+        visibility: visible;
+}
+
+.gallery-inner input:checked + label {
+        background-color: #ddc1d8;
+}
+
+.gallery-inner:hover li:nth-child(1) label {
+        left: 4vh;
+}.gallery-inner:hover li:nth-child(2) label {
+        left: 8vh;
+}.gallery-inner:hover li:nth-child(3) label {
+        left: 12vh;
+}.gallery-inner:hover li:nth-child(4) label {
+        left: 16vh;
+}.gallery-inner:hover li:nth-child(5) label {
+        left: 20vh;
+}.gallery-inner:hover li:nth-child(6) label {
+        left: 24vh;
+}.gallery-inner:hover li:nth-child(7) label {
+        left: 28vh;
+}.gallery-inner:hover li:nth-child(8) label {
+        left: 32vh;
+}.gallery-inner:hover li:nth-child(9) label {
+        left: 36vh;
+}.gallery-inner:hover li:nth-child(10) label {
+        left: 40vh;
+}.gallery-inner:hover li:nth-child(11) label {
+        left: 44vh;
+}.gallery-inner:hover li:nth-child(12) label {
+        left: 48vh;
+}.gallery-inner:hover li:nth-child(13) label {
+        left: 52vh;
+}.gallery-inner:hover li:nth-child(14) label {
+        left: 56vh;
+}.gallery-inner:hover li:nth-child(15) label {
+        left: 60vh;
+}.gallery-inner:hover li:nth-child(16) label {
+        left: 64vh;
+}
+
+ /* Images */
+
+.gallery-inner img {
+        max-width: 100%;
+        max-height: 100%;
+        opacity: 0;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+        visibility: hidden;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+}
+
+.gallery-inner li input:checked ~ img {
+        opacity: 1;
+        visibility: visible;
+        z-index: 0;
+} 

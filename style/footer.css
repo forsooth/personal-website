@@ -1,0 +1,33 @@
+
+div.footer {
+        height: 5px;
+        width: 100%;
+        margin-top: 2.5vh;
+        background-color: #d57ab3;
+}
+
+div.little-color {
+        float: left;
+        width: 7.5vh;
+        height: 100%;
+}
+
+div.goldenrod {
+        background-color: #ffd887;
+}
+
+div.peach {
+        background-color: #ffc687;
+}
+
+div.orange-red {
+        background-color: #ffae87;
+}
+
+div.red {
+        background-color: #ff8787;
+}
+
+div.pink {
+        background-color: #ff87ae;
+}
