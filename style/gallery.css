@@ -34,8 +34,8 @@
         border-radius: 100%;
         cursor: pointer;
         display: block;
-        height: 2.5vh;
-        width: 2.5vh;
+        height: 25px;
+        width: 25px;
         left: 0;
         float: left;
         text-align: center;
@@ -73,37 +73,37 @@
 }
 
 .gallery-inner:hover li:nth-child(1) label {
-        left: 4vh;
+        left: 25px;
 }.gallery-inner:hover li:nth-child(2) label {
-        left: 8vh;
+        left: 50px;
 }.gallery-inner:hover li:nth-child(3) label {
-        left: 12vh;
+        left: 75px;
 }.gallery-inner:hover li:nth-child(4) label {
-        left: 16vh;
+        left: 100px;
 }.gallery-inner:hover li:nth-child(5) label {
-        left: 20vh;
+        left: 125px;
 }.gallery-inner:hover li:nth-child(6) label {
-        left: 24vh;
+        left: 150px;
 }.gallery-inner:hover li:nth-child(7) label {
-        left: 28vh;
+        left: 175px;
 }.gallery-inner:hover li:nth-child(8) label {
-        left: 32vh;
+        left: 200px;
 }.gallery-inner:hover li:nth-child(9) label {
-        left: 36vh;
+        left: 225px;
 }.gallery-inner:hover li:nth-child(10) label {
-        left: 40vh;
+        left: 250px;
 }.gallery-inner:hover li:nth-child(11) label {
-        left: 44vh;
+        left: 275px;
 }.gallery-inner:hover li:nth-child(12) label {
-        left: 48vh;
+        left: 300px;
 }.gallery-inner:hover li:nth-child(13) label {
-        left: 52vh;
+        left: 325px;
 }.gallery-inner:hover li:nth-child(14) label {
-        left: 56vh;
+        left: 350px;
 }.gallery-inner:hover li:nth-child(15) label {
-        left: 60vh;
+        left: 375px;
 }.gallery-inner:hover li:nth-child(16) label {
-        left: 64vh;
+        left: 400px;
 }
 
  /* Images */

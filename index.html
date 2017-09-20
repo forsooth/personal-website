@@ -1,190 +1,192 @@
 <html lang=en-US>
 <head>
-        <title>Matt Asnes's Digital Portfolio</title>
-        <link rel="stylesheet" href="http://mattasnes.com/style/main.css" />
-        <link rel="stylesheet" href="http://mattasnes.com/style/nav.css" />
-        <link rel="stylesheet" href="http://mattasnes.com/style/hello.css" />
-        <link rel="stylesheet" href="http://mattasnes.com/style/tabs.css" />
-        <link rel="stylesheet" href="http://mattasnes.com/style/gallery.css" />
-        <link rel="stylesheet" href="http://mattasnes.com/style/footer.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
+    <title>Matt Asnes's Digital Portfolio</title>
+    <link rel="stylesheet" href="/style/main.css" />
+    <link rel="stylesheet" href="/style/nav.css" />
+    <link rel="stylesheet" href="/style/hello.css" />
+    <link rel="stylesheet" href="/style/tabs.css" />
+    <link rel="stylesheet" href="/style/gallery.css" />
+    <link rel="stylesheet" href="/style/footer.css" />
 </head>
 
-<body>
-        <div id="main">
-                <div id="middle-column">
-                        <div id="top-bar">
-                                <div id="particles-js"></div>
-                                <a href="http://mattasnes.com"><div class="logo"></div></a>
-                                <nav class="main-nav">
-                                        <ul class="nav-list">
-                                                <li class="nav-element" style="background-color: #ffeeca">
-                                                        <a href="http://mattasnes.com/about/" style="background-color: #ffd887">About</a>
-                                                </li>
-                                                <li class="nav-element" style="background-color: #ffe6ca">
-                                                        <a href="http://mattasnes.com/resume/" style="background-color: #ffc687">Resume</a>
-                                                </li>
-                                                <li class="nav-element" style="background-color: #ffd8ca">
-                                                        <a href="http://mattasnes.com/projects" style="background-color: #ffae87">Projects</a>
-                                                </li>
-                                                <li class="nav-element" style="background-color: #ffcaca">
-                                                        <a href="http://mattasnes.com/art/" style="background-color: #ff8787">Art</a>
-                                                </li>
-                                                <li class="nav-element" style="background-color: #ffcad8">
-                                                        <a href="http://mattasnes.com/contact/" style="background-color: #ff87ae">Contact</a>
-                                                </li>
-                                        </ul>
-                                </nav>
+<body onresize="resizeCanvas(event)">
+    <div id="main">
+        <canvas id="graph-canvas-large"></canvas>
+        <div id="middle-column">
+            <div id="top-bar">
+                <div id="logo-graph">
+                    <canvas id="graph-canvas-small"></canvas>
+                </div>
+                <a href="http://mattasnes.com"><div class="logo"></div></a>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-element" style="background-color: #ffeeca">
+                            <a href="/about/" style="background-color: #ffd887">About</a>
+                        </li>
+                        <li class="nav-element" style="background-color: #ffe6ca">
+                            <a href="/resume/" style="background-color: #ffc687">Resume</a>
+                        </li>
+                        <li class="nav-element" style="background-color: #ffd8ca">
+                            <a href="/projects" style="background-color: #ffae87">Projects</a>
+                        </li>
+                        <li class="nav-element" style="background-color: #ffcaca">
+                            <a href="/art/" style="background-color: #ff8787">Art</a>
+                        </li>
+                        <li class="nav-element" style="background-color: #ffcad8">
+                            <a href="/contact/" style="background-color: #ff87ae">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="content">
+                <div class="hello">
+                    <span>Hello!</span>
+                    <span class="subtitle">I'm a student at Tufts University studying Computer Science and Physics. I'm also interested in art, and maintain a portfolio here.</span> 
+                </div>
+
+                <div class="tabbed-content-container">
+                    <ul class="tabbed-content">
+                        <li class="tab tab-1" rel="tab-1">
+                            Projects
+                        </li>
+                        <li class="tab tab-2" rel="tab-2">
+                            Portfolio
+                        </li>
+                    </ul>
+                    <div id="tab-1" class="two-content-columns">
+                        <div class="gallery">    
+                            <ul class="gallery-inner">
+                                <li>
+                                    <input type="radio" id="slide1" name="slide" checked="checked" />
+                                    <label for="slide1" rel="desc1">
+                                    </label>
+                                    <img src="/images/bitshift/main-menu.png" />
+                                </li>
+                                <li>
+                                    <input type="radio" id="slide2" name="slide" />
+                                    <label for="slide2"rel="desc2">
+                                    </label>
+                                    <img src="/images/uav/assn6-1.png" />
+                                </li>
+                                <li>
+                                    <input type="radio" id="slide3" name="slide" />
+                                    <label for="slide3"rel="desc3">
+                                    </label>
+                                    <img src="/images/robotics/website-final-2013.jpg" />
+                                </li>
+                                <li>
+                                    <input type="radio" id="slide4" name="slide" />
+                                    <label for="slide4"rel="desc4">
+                                    </label>
+                                    <img src="/images/aad/july.jpg" />
+                                </li>
+                                </ul>
                         </div>
-                        <div id="content">
-                                <div class="hello">
-                                        <span>Hello!</span>
-                                        <span class="subtitle">I'm a student at Tufts University studying Computer Science and Physics. I'm also interested in art, and maintain a portfolio here.</span> 
-                                </div>
-
-                                <div class="tabbed-content-container">
-                                        <ul class="tabbed-content">
-                                                <li class="tab tab-1" rel="tab-1">
-                                                        Projects
-                                                </li>
-                                                <li class="tab tab-2" rel="tab-2">
-                                                        Portfolio
-                                                </li>
-                                        </ul>
-                                        <div id="tab-1" class="two-content-columns">
-                                                <div class="gallery">    
-                                                        <ul class="gallery-inner">
-                                                                <li>
-                                                                        <input type="radio" id="slide1" name="slide" checked="checked" />
-                                                                        <label for="slide1" rel="desc1">
-                                                                        </label>
-                                                                        <img src="http://mattasnes.com/images/bitshift/main-menu.png" />
-                                                                </li>
-                                                                <li>
-                                                                        <input type="radio" id="slide2" name="slide" />
-                                                                        <label for="slide2"rel="desc2">
-                                                                        </label>
-                                                                        <img src="http://mattasnes.com/images/uav/assn6-1.png" />
-                                                                </li>
-                                                                <li>
-                                                                        <input type="radio" id="slide3" name="slide" />
-                                                                        <label for="slide3"rel="desc3">
-                                                                        </label>
-                                                                        <img src="http://mattasnes.com/images/robotics/website-final-2013.jpg" />
-                                                                </li>
-                                                                <li>
-                                                                        <input type="radio" id="slide4" name="slide" />
-                                                                        <label for="slide4"rel="desc4">
-                                                                        </label>
-                                                                        <img src="http://mattasnes.com/images/aad/july.jpg" />
-                                                                </li>
-                                                            </ul>
-                                                </div>
-                                                <div class="description tab-1 desc1">
-                                                        <h3>Bitshift</h3>
-                                                        <p>Bitshift was a JavaScript web game written in the Phaser game engine for my game development class. It follows a beleaguered Tufts computer science student in his or her androgynous attempts to fix a buggy game development project. The game was created with a group of four other students. It can be played on its <a href="https://johnygall.github.io/Comp23Project1/">project page</a>!</p>
-                                                </div>
-                                                <div class="description tab-1 desc2">
-                                                        <h3>UAV Simulation</h3>
-                                                        <p>This was a project made for one of my classes, Object Oriented Programming for Graphical User Interfaces (it's a mouthful). It culminated in a simulator of unmanned aircraft control, including writing my own GUI elements and procedurally generated maps to fly the planes in. All five stages of the assignment are on GitHub.</p>
-                                                </div>
-                                                <div class="description tab-1 desc3">
-                                                        <h3>Silver Circuit Website</h3>
-                                                        <p>This website was created in 2013 for my high school robotics team, in addition to programming the robots. It was recently taken down as students with web development experience graduated, but it constituted a considerable code base: more than 20,000 lines of HTML, CSS, JavaScript, and PHP written, not including all of the code I did not write.</p>
-                                                </div>
-                                                <div class="description tab-1 desc4">
-                                                        <h3>Album A Day</h3>
-                                                        <p>This was a personal project I did over a few days in the summer of 2015. A friend and I began listening to one album every day, to round out our music knowledge. He made images in Paint, but that seemed like enough work that I wrote a utility to do it &mdash; I also wanted an excuse to write some C++. So the program reads in a list of albums, artists, and dates, and outputs a correct calendar. Album covers are scraped from the web.</p>
-                                                </div>
-                                        </div>
-                                        <div id="tab-2" class="two-content-columns">
-                                                <div class="gallery">
-                                                        <ul class="gallery-inner">
-                                                                <li>
-                                                                        <input type="radio" id="slide5" name="slide" />
-                                                                        <label for="slide5" rel="desc5">
-                                                                        </label>
-                                                                        <img src="http://mattasnes.com/images/portfolio/hand-drawn-design-1.jpg" />
-                                                                </li>
-                                                                <li>
-                                                                        <input type="radio" id="slide6" name="slide" />
-                                                                        <label for="slide6" rel="desc6">
-                                                                        </label>
-                                                                        <img src="http://mattasnes.com/images/portfolio/tshirt-2.jpg" />
-                                                                </li>
-                                                                <li>
-                                                                        <input type="radio" id="slide7" name="slide" />
-                                                                        <label for="slide7" rel="desc7">
-                                                                        </label>
-                                                                        <img src="http://mattasnes.com/images/portfolio/book-1.jpg" />
-                                                                </li>
-                                                                <li>
-                                                                        <input type="radio" id="slide8" name="slide" />
-                                                                        <label for="slide8" rel="desc8">
-                                                                        </label>
-                                                                        <img src="http://mattasnes.com/images/portfolio/book-2.jpg" />
-                                                                </li>
-                                                                <li>
-                                                                        <input type="radio" id="slide9" name="slide" />
-                                                                        <label for="slide9" rel="desc9">
-                                                                        </label>
-                                                                        <img src="http://mattasnes.com/images/portfolio/map-1.jpg" />
-                                                                </li>
-                                                                <li>
-                                                                        <input type="radio" id="slide10" name="slide" />
-                                                                        <label for="slide10" rel="desc10">
-                                                                        </label>
-                                                                        <img src="http://mattasnes.com/images/portfolio/movie-title-screen-1.jpg" />
-                                                                </li>
-                                                            </ul>
-
-                                                </div>
-                                                <div class="description tab-2 desc5">
-                                                        <h3>Purple and Black, Ink on Paper</h3>
-                                                        <p>Given my interest in computers, most art and design work I do is digital. However, I do enjoy actual, physical drawing, especially elaborate and intricate abstract designs.</p> 
-                                                </div>
-                                                <div class="description tab-2 desc6">
-                                                        <h3>Silver Circuit T-Shirt</h3>
-                                                        <p>This was the design for our team's t-shirts for the 2014 competition year. The design was printed on red shirts, and created with Adobe Illustrator. The design is based on the CAD of the robot, and the circular shape in the center was the top view of our robot. The main constraint was the color limits of screen printing, but I think it turned out very well.</p>
-                                                </div>
-                                                <div class="description tab-2 desc7">
-                                                        <h3>Lord of the Rings Book Covers</h3>
-                                                        <p>As a hobby, and to practice design, I like to create book covers. In this case, I was inspired by J.R.R. Tolkien's original cover designs for the series, and vectorized them, also adding personal touches. One interesting challenge in this, though not visible in the cover to the left, was typesetting the Elvish languages on the covers.</p>
-                                                </div>
-                                                <div class="description tab-2 desc8">
-                                                        <h3>Dune Book Cover</h3>
-                                                        <p>Another book cover, this time not a vector but rather a design I particularly liked. Anyone who has read the book should know the thematic significance of a drop of water in the desert, and the color blue. </p>
-                                                </div>
-                                                <div class="description tab-2 desc9">
-                                                        <h3>Westeros Map (Game of Thrones)</h3>
-                                                        <p>As a personal project, I took an interest in cartography. As a first project pursuant to this, and given my annoyance with the lack of high quality fan-made (or official) maps online while reading the books, I created a comprehensive map of the Game of Thrones/A Song of Ice and Fire continent of Westeros. The map is huge, and contains every major or minor location I could find in the books or online.</p>
-                                                </div>
-                                                <div class="description tab-2 desc10">
-                                                        <h3>Arabic Video Project Design</h3>
-                                                        <p>For a video project in my Arabic class, I did a fair amount of design work in the Arabic language, which posed an interesting challenge. Especially given that the audience was mainly comprised of non-native, intermediate-level speakers who needed large, easy to read letters.</p>
-                                                </div>
-                                        </div>
-                                </div>
+                        <div class="description tab-1 desc1">
+                            <h3>Bitshift</h3>
+                            <p>Bitshift was a JavaScript web game written in the Phaser game engine for my game development class. It follows a beleaguered Tufts computer science student in his or her androgynous attempts to fix a buggy game development project. The game was created with a group of four other students. It can be played on its <a href="https://johnygall.github.io/Comp23Project1/">project page</a>!</p>
                         </div>
-
-                        <div class="bottom-logo">
-                                <img src="http://mattasnes.com/images/MA-small.png" />
+                        <div class="description tab-1 desc2">
+                            <h3>UAV Simulation</h3>
+                            <p>This was a project made for one of my classes, Object Oriented Programming for Graphical User Interfaces (it's a mouthful). It culminated in a simulator of unmanned aircraft control, including writing my own GUI elements and procedurally generated maps to fly the planes in. All five stages of the assignment are on GitHub.</p>
                         </div>
-
-                        <div class="footer">
-                                <div class="little-color goldenrod"></div>
-                                <div class="little-color peach"></div>
-                                <div class="little-color orange-red"></div>
-                                <div class="little-color red"></div>
-                                <div class="little-color pink"></div>
+                        <div class="description tab-1 desc3">
+                            <h3>Silver Circuit Website</h3>
+                            <p>This website was created in 2013 for my high school robotics team, in addition to programming the robots. It was recently taken down as students with web development experience graduated, but it constituted a considerable code base: more than 20,000 lines of HTML, CSS, JavaScript, and PHP written, not including all of the code I did not write.</p>
                         </div>
-                </div> 
-        </div>
+                        <div class="description tab-1 desc4">
+                            <h3>Album A Day</h3>
+                            <p>This was a personal project I did over a few days in the summer of 2015. A friend and I began listening to one album every day, to round out our music knowledge. He made images in Paint, but that seemed like enough work that I wrote a utility to do it &mdash; I also wanted an excuse to write some C++. So the program reads in a list of albums, artists, and dates, and outputs a correct calendar. Album covers are scraped from the web.</p>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="two-content-columns">
+                        <div class="gallery">
+                            <ul class="gallery-inner">
+                                <li>
+                                    <input type="radio" id="slide5" name="slide" />
+                                    <label for="slide5" rel="desc5">
+                                    </label>
+                                    <img src="/images/portfolio/hand-drawn-design-1.jpg" />
+                                </li>
+                                <li>
+                                    <input type="radio" id="slide6" name="slide" />
+                                    <label for="slide6" rel="desc6">
+                                    </label>
+                                    <img src="/images/portfolio/tshirt-2.jpg" />
+                                </li>
+                                <li>
+                                    <input type="radio" id="slide7" name="slide" />
+                                    <label for="slide7" rel="desc7">
+                                    </label>
+                                    <img src="/images/portfolio/book-1.jpg" />
+                                </li>
+                                <li>
+                                    <input type="radio" id="slide8" name="slide" />
+                                    <label for="slide8" rel="desc8">
+                                    </label>
+                                    <img src="/images/portfolio/book-2.jpg" />
+                                </li>
+                                <li>
+                                    <input type="radio" id="slide9" name="slide" />
+                                    <label for="slide9" rel="desc9">
+                                    </label>
+                                    <img src="/images/portfolio/map-1.jpg" />
+                                </li>
+                                <li>
+                                    <input type="radio" id="slide10" name="slide" />
+                                    <label for="slide10" rel="desc10">
+                                    </label>
+                                    <img src="/images/portfolio/movie-title-screen-1.jpg" />
+                                </li>
+                                </ul>
 
-        <script src="http://mattasnes.com/js/particles.min.js"></script>
-        <script src="http://mattasnes.com/js/app.js"></script>
-        <script src="http://mattasnes.com/js/nav-bar-tracking.js"></script>
-        <script src="http://mattasnes.com/js/tab-switching.js"></script>
+                        </div>
+                        <div class="description tab-2 desc5">
+                            <h3>Purple and Black, Ink on Paper</h3>
+                            <p>Given my interest in computers, most art and design work I do is digital. However, I do enjoy actual, physical drawing, especially elaborate and intricate abstract designs.</p> 
+                        </div>
+                        <div class="description tab-2 desc6">
+                            <h3>Silver Circuit T-Shirt</h3>
+                            <p>This was the design for our team's t-shirts for the 2014 competition year. The design was printed on red shirts, and created with Adobe Illustrator. The design is based on the CAD of the robot, and the circular shape in the center was the top view of our robot. The main constraint was the color limits of screen printing, but I think it turned out very well.</p>
+                        </div>
+                        <div class="description tab-2 desc7">
+                            <h3>Lord of the Rings Book Covers</h3>
+                            <p>As a hobby, and to practice design, I like to create book covers. In this case, I was inspired by J.R.R. Tolkien's original cover designs for the series, and vectorized them, also adding personal touches. One interesting challenge in this, though not visible in the cover to the left, was typesetting the Elvish languages on the covers.</p>
+                        </div>
+                        <div class="description tab-2 desc8">
+                            <h3>Dune Book Cover</h3>
+                            <p>Another book cover, this time not a vector but rather a design I particularly liked. Anyone who has read the book should know the thematic significance of a drop of water in the desert, and the color blue. </p>
+                        </div>
+                        <div class="description tab-2 desc9">
+                            <h3>Westeros Map (Game of Thrones)</h3>
+                            <p>As a personal project, I took an interest in cartography. As a first project pursuant to this, and given my annoyance with the lack of high quality fan-made (or official) maps online while reading the books, I created a comprehensive map of the Game of Thrones/A Song of Ice and Fire continent of Westeros. The map is huge, and contains every major or minor location I could find in the books or online.</p>
+                        </div>
+                        <div class="description tab-2 desc10">
+                            <h3>Arabic Video Project Design</h3>
+                            <p>For a video project in my Arabic class, I did a fair amount of design work in the Arabic language, which posed an interesting challenge. Especially given that the audience was mainly comprised of non-native, intermediate-level speakers who needed large, easy to read letters.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-logo">
+                <img src="/images/MA-small.png" />
+            </div>
+
+            <div class="footer">
+                <div class="little-color goldenrod"></div>
+                <div class="little-color peach"></div>
+                <div class="little-color orange-red"></div>
+                <div class="little-color red"></div>
+                <div class="little-color pink"></div>
+            </div>
+        </div> 
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/nav-bar-tracking.js"></script>
+    <script src="/js/tab-switching.js"></script>
+    <script>var module = {};</script>
+    <script src="/js/delaunator.js"></script>
+    <script src="/js/viz.js"></script>
 </body>
 </html>

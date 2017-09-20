@@ -6,57 +6,91 @@
         background: #ffff00;
 }
 
-html, body {
+html {
+        min-height: 100%;
+        max-height: 100%;
+        overflow: auto;
+}
+
+body {
         margin: 0;
         padding: 0;
         height: 100%;
         width: 100%;
         font-family: "Raleway", "Open Sans", "Helvetica", sans-serif;
         font-weight: 400;
-        font-size: 0.8vw;
+        font-size: 1em;
         color: #3e3e3e;
+        overflow: auto;
 }
 
 div#main {
         margin: 0;
         padding: 0;
-        min-height: 100%;
+        height: 100%;
         width: 100%;
         background-color: #494949;
 }
 
+div#content {
+        float: left;
+}
+
+canvas#graph-canvas-large {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+}
+
+canvas#graph-canvas-small {
+        width: 100%;
+        height: 100%;
+}
+
 div#middle-column {
-        margin: 0 15vw 0 15vw;
+        position: relative;
+        width: 1200px;
+        overflow: auto;
+        margin: 0 auto 0 auto;
         background-color: #fffeed;
 }
 
-div#particles-js {
+div#logo-graph {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
         height: 100%;
         width: 100%;
 }
 
 div#top-bar {
+        position: relative;
         background-color: #dfc1d4;
         width: 100%;
-        height: 15vh;
+        height: 160px;
         border-bottom: 5px solid #d57ab3;
-        background-image: url(../images/blurred-particles.png);
         background-size: 100%;
 }
 
 div.logo {
-        height: 10vh;
-        width: 59.5275591vh;
-        margin-left: 2.5%;
-        position: relative;
-        top: 7.5vh;
-        transform: translateY(-20vh);
+        z-index: 1;
+        height: 100px;
+        width: 700px;
+        margin-left: 60px;
+        margin-top: 30px;
+        float: left;
+        background-repeat: no-repeat;
         background-image: url(../images/namelogo.png);
         background-size: contain;
 }
 
 div.bottom-logo {
-        margin-top: 2.5vh;
+        float: left;
+        margin-top: 25px;
+        margin-bottom: 25px;
         text-align: center;
         width: 100%;
 }
@@ -66,8 +100,8 @@ div.bottom-logo img {
 }
 
 div.textcontent {
-        margin-left: 10vw;
-        margin-right: 10vw;
+        margin-left: 120px;
+        margin-right: 120px;
 }
 
 div.textcontent p {

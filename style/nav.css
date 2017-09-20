@@ -1,7 +1,6 @@
 nav.main-nav {
-        position: absolute;
-        right: 15vw;
-        top: 0;
+        float: right;
+        z-index: 1;
 }
 
 ul.nav-list {
@@ -12,17 +11,18 @@ ul.nav-list {
 }
 
 li.nav-element {
+        position: relative;
         float: left;
-        height: 15vh;
+        height: 160px;
         cursor: pointer;
 }
 
 li.nav-element a {
         display: block;
-        width:7.5vh;
-        height: 7.5vh;
-        line-height: 7.5vh;
-        margin-top: 7.5vh;
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        margin-top: 80px;
         text-align: center;
         text-decoration: none;
         color: #3e3e3e;

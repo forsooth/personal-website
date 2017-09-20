@@ -1,9 +1,9 @@
 
 .tabbed-content-container {
-        margin-left: 7.5vw;
-        margin-right: 7.5vw;
-        margin-top: 10vh;
-        overflow: hidden;
+        margin-top: 50px;
+        margin-left: 120px;
+        margin-right: 120px;
+        float: left;
 }
 
 ul.tabbed-content {
@@ -17,11 +17,11 @@ ul.tabbed-content {
 ul.tabbed-content li {
         float: left;
         cursor: pointer;
-        height: 10vh;
-        width: 15vw;
+        height: 80px;
+        width: 200px;
 
         text-align: center;
-        line-height: 10vh;
+        line-height: 80px;
         font-size: 3em;
         font-weight: 200;
 
@@ -53,27 +53,26 @@ ul.tabbed-content li.active{
 
 .two-content-columns {
         clear: both;
-        float: left;
         width: 100%;
 
 }
 
 .gallery {
         float: left;
-        height: 50vh;
-        width: 35vw;
+        height: 500px;
+        width: 650px;
         background-color: #807f77;
         text-align: center;
 }
 
 .description {
         float: left;
-        height: 50vh;
-        width: 17.5vw;
-        padding: 2.5vh 2.5vw 2.5vh 2.5vw;
+        height: 500px;
+        width: 300px;
+        padding: 25px 25px 25px 25px;
         background-color: #ffeeca;
         text-align: center;
-        /*overflow-y: scroll;*/
+        overflow-y: auto;
         box-sizing: border-box;
         border-bottom: 5px solid #d57ab3;
 }
