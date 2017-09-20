@@ -23,23 +23,32 @@ num_i_points = 100;
 
 resizeCanvas();
 
+/* Resize the canvas element and re-generate points based on calculated
+ * width and height. Old edge and corner points are deleted, and new ones
+ * are added corresponding to the new coordinates of the edges and corners.
+*/
 function resizeCanvas() {
+    // Grab the calculated dimensions
     var cs = getComputedStyle(canvas);
-    canvas.width = parseInt(cs.getPropertyValue('width'), 10);
-    canvas.height = parseInt(cs.getPropertyValue('height'), 10);
-    w = canvas.width;
-    h = canvas.height;
+    w = parseInt(cs.getPropertyValue('width'), 10);
+    h = parseInt(cs.getPropertyValue('height'), 10);
+    canvas.width = w + "px";
+    canvas.height = h + "px";
+
+    // scale if Hi-DPI for better quality
     if (window.devicePixelRatio >= 2) {
         canvas.width = w * 2;
         canvas.height = h * 2;
         ctx.scale(2, 2);
     }
 
+    // Remove old corner and edge points
     for (var i = 0; i < num_w_points + num_h_points + 4; i++) {
         points.pop();
         speeds.pop();
     }
 
+    // Add new points
     for (var i = 0; i < num_w_points; i++) {
         points.push([Math.random() * w, 0]);
         speeds.push([Math.random() * v + 1, 0]);
