@@ -29,8 +29,8 @@ function resizeFrontCanvas() {
     var cs = getComputedStyle(front_canvas);
     front_w = parseInt(cs.getPropertyValue('width'), 10);
     front_h = parseInt(cs.getPropertyValue('height'), 10);
-    front_canvas.width = front_w + "px";
-    front_canvas.height = front_h + "px";
+    front_canvas.width = front_w;
+    front_canvas.height = front_h;
 
     // scale if Hi-DPI for better quality
     if (window.devicePixelRatio >= 2) {

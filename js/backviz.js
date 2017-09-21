@@ -28,8 +28,8 @@ function resizeBackCanvas() {
     var cs = getComputedStyle(back_canvas);
     back_w = parseInt(cs.getPropertyValue('width'), 10);
     back_h = parseInt(cs.getPropertyValue('height'), 10);
-    back_canvas.width = back_w + "px";
-    back_canvas.height = back_h + "px";
+    back_canvas.width = back_w;
+    back_canvas.height = back_h;
 
     // scale if Hi-DPI for better quality
     if (window.devicePixelRatio >= 2) {
