@@ -38,7 +38,7 @@ div#content {
         left: 0;
         margin: 0 0 0 0;
         background-color: #fffeed;
-
+        box-shadow: 0px 0px 40px #222222;
 }
 
 canvas#graph-canvas-large {
@@ -53,6 +53,8 @@ canvas#graph-canvas-large {
 }
 
 canvas#graph-canvas-small {
+        position: relative;
+        z-index: 1;
         width: 100%;
         height: 100%;
 }
@@ -73,17 +75,21 @@ div#logo-graph {
         width: 100%;
 }
 
-div#top-bar {
+header#top-bar {
+        z-index: 1;
         position: relative;
         background-color: #dfc1d4;
         width: 100%;
         height: 160px;
         border-bottom: 5px solid #d57ab3;
         background-size: 100%;
+        box-shadow: 0px 0px 40px #222222;
+
 }
 
 div.logo {
         z-index: 2;
+        position: relative;
         height: 100px;
         width: 700px;
         margin-left: 60px;
@@ -116,6 +122,7 @@ div.textcontent p {
 }
 
 a {
+        z-index: 2;
         -webkit-text-decoration-skip: ink;
         text-decoration-skip: ink;
 }

@@ -9,35 +9,35 @@
     <link rel="stylesheet" href="/style/footer.css" />
 </head>
 
-<body onresize="resizeCanvas(event)">
+<body onresize="resizeBackCanvas(event); resizeFrontCanvas(event);">
     <div id="main">
         <canvas id="graph-canvas-large"></canvas>
         <div id="middle-column">
-            <div id="top-bar">
+            <header id="top-bar">
                 <div id="logo-graph">
                     <canvas id="graph-canvas-small"></canvas>
                 </div>
                 <a href="http://mattasnes.com"><div class="logo"></div></a>
                 <nav class="main-nav">
                     <ul class="nav-list">
-                        <li class="nav-element" style="background-color: #ffeeca">
+                        <li class="nav-element" style="background-color: rgba(255, 238, 202, 0.75)">
                             <a href="/about/" style="background-color: #ffd887">About</a>
                         </li>
-                        <li class="nav-element" style="background-color: #ffe6ca">
+                        <li class="nav-element" style="background-color: rgba(255, 230, 202, 0.75)">
                             <a href="/resume/" style="background-color: #ffc687">Resume</a>
                         </li>
-                        <li class="nav-element" style="background-color: #ffd8ca">
+                        <li class="nav-element" style="background-color: rgba(255, 216, 202, 0.75)">
                             <a href="/projects" style="background-color: #ffae87">Projects</a>
                         </li>
-                        <li class="nav-element" style="background-color: #ffcaca">
+                        <li class="nav-element" style="background-color: rgba(255, 202, 202, 0.75)">
                             <a href="/art/" style="background-color: #ff8787">Art</a>
                         </li>
-                        <li class="nav-element" style="background-color: #ffcad8">
+                        <li class="nav-element" style="background-color: rgba(255, 202, 216, 0.75)">
                             <a href="/contact/" style="background-color: #ff87ae">Contact</a>
                         </li>
                     </ul>
                 </nav>
-            </div>
+            </header>
             <div id="content">
                 <div class="hello">
                     <span>Hello!</span>
@@ -63,43 +63,43 @@
                                     <img src="/images/bsts/output1.png" />
                                 </li>
                                 <li>
-                                    <input type="radio" id="slide2" name="slide" checked="checked" />
+                                    <input type="radio" id="slide2" name="slide" />
                                     <label for="slide2" rel="desc2">
                                     </label>
-                                    <img src="/images/sanddial/sanddial.png" />
+                                    <img src="/images/sanddial/sanddial2.png" />
                                 </li>
                                 <li>
-                                    <input type="radio" id="slide3" name="slide" checked="checked" />
+                                    <input type="radio" id="slide3" name="slide" />
                                     <label for="slide3" rel="desc3">
                                     </label>
                                     <img src="/images/cardcontrol/admin-page.png" />
                                 </li>
                                 <li>
-                                    <input type="radio" id="slide4" name="slide" checked="checked" />
+                                    <input type="radio" id="slide4" name="slide" />
                                     <label for="slide4" rel="desc4">
                                     </label>
-                                    <img src="/images/tm/debug2.png" />
+                                    <img src="/images/turing/debug2.png" />
                                 </li>
                                 <li>
-                                    <input type="radio" id="slide5" name="slide" checked="checked" />
+                                    <input type="radio" id="slide5" name="slide" />
                                     <label for="slide5" rel="desc5">
                                     </label>
                                     <img src="/images/cudasorts/graph.png" />
                                 </li>
                                 <li>
-                                    <input type="radio" id="slide6" name="slide" checked="checked" />
+                                    <input type="radio" id="slide6" name="slide" />
                                     <label for="slide6" rel="desc6">
                                     </label>
                                     <img src="/images/bitshift/main-menu.png" />
                                 </li>
                                 <li>
-                                    <input type="radio" id="slide7" name="slide" checked="checked" />
+                                    <input type="radio" id="slide7" name="slide" />
                                     <label for="slide7" rel="desc7">
                                     </label>
                                     <img src="/images/this-website/homepage.png" />
                                 </li>
                                 <li>
-                                    <input type="radio" id="slide8" name="slide" checked="checked" />
+                                    <input type="radio" id="slide8" name="slide" />
                                     <label for="slide8" rel="desc8">
                                     </label>
                                     <img src="/images/uav/assn6-1.png" />
@@ -108,13 +108,13 @@
                                     <input type="radio" id="slide9" name="slide" />
                                     <label for="slide9" rel="desc9">
                                     </label>
-                                    <img src="/images/aad/july.png" />
+                                    <img src="/images/aad/july.jpg" />
                                 </li>
                                 <li>
                                     <input type="radio" id="slide10" name="slide" />
                                     <label for="slide10" rel="desc10">
                                     </label>
-                                    <img src="/images/resume/latex.png" />
+                                    <img src="/images/latex-resume/latex.png" />
                                 </li>
                                 <li>
                                     <input type="radio" id="slide11" name="slide" />
@@ -250,7 +250,7 @@
                 <div class="bottom-logo">
                     <img src="/images/MA-small.png" />
                 </div>
-    
+
                 <div class="footer">
                 <div class="little-color goldenrod"></div>
                 <div class="little-color peach"></div>
@@ -268,6 +268,7 @@
     <script src="/js/tab-switching.js"></script>
     <script>var module = {};</script>
     <script src="/js/delaunator.js"></script>
-    <script src="/js/viz.js"></script>
+    <script src="/js/backviz.js"></script>
+    <script src="/js/topviz.js"></script>
 </body>
 </html>
