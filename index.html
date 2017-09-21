@@ -136,7 +136,7 @@
                         </div>
                         <div class="description tab-1 desc2">
                             <h3>SandDial</h3>
-                            <p>For a fun week's project over the summer of 2017, and to teach my younger brother programming, we built what we call a Sand Dial &mdash; a clock built from a self-turning hourglass. The basic mechanism is an hourglass stuck to a servo, across from a camera. The camera and motor are both run by a Raspberry Pi. Using OpenCV, we made a tight routine of <code>[thresholding -> Canny edge detection -> edge dilation -> contour separation</code> to find the location of the sand in the image. When no sand is detected in the top of the hourglass, a signal is sent to the servo to flip itself. A video of it in action can be found <a href="https://youtu.be/hL9x73XRZr0">here</a>. My code can be found on GitHub <a href="https://github.com/forsooth/sanddial">here</a> and, for posterity, my brother's can be found <a href="https://github.com/nicasnes/clockified">here</a>.</p>
+                            <p>For a fun week's project over the summer of 2017, and to teach my younger brother programming, we built what we call a Sand Dial &mdash; a clock built from a self-turning hourglass. The basic mechanism is an hourglass stuck to a servo, across from a camera. The camera and motor are both run by a Raspberry Pi. Using OpenCV, we made a tight routine of <code>[thresholding -> Canny edge detection -> edge dilation -> contour separation]</code> to find the location of the sand in the image. When no sand is detected in the top of the hourglass, a signal is sent to the servo to flip itself. A video of it in action can be found <a href="https://youtu.be/hL9x73XRZr0">here</a>. My code can be found on GitHub <a href="https://github.com/forsooth/sanddial">here</a> and, for posterity, my brother's can be found <a href="https://github.com/nicasnes/clockified">here</a>.</p>
                         </div>
                         <div class="description tab-1 desc3">
                             <h3>CardControl</h3>
@@ -247,6 +247,10 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="hello">
+                    <span class="subtitle" style="margin-top:50px">About the site: everything here was made pretty much by hand; the Delaunay triangulations are done using a conveniently fast <a href="https://github.com/mapbox/delaunator">library</a> though the drawing of the shapes was written by me. I know my color scheme is garish, but I love it. "Use more muted blues and greens" says Adam.</span>
+                </div>  
                 <div class="bottom-logo">
                     <img src="/images/MA-small.png" />
                 </div>

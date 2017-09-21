@@ -92,9 +92,9 @@ div.logo {
         z-index: 2;
         position: relative;
         height: 100px;
-        width: 700px;
+        width: 500px;
         margin-left: 60px;
-        margin-top: 30px;
+        margin-top: 35px;
         float: left;
         background-repeat: no-repeat;
         background-image: url(../images/namelogo.png);
