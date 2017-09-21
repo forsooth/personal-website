@@ -32,6 +32,7 @@ div#main {
 }
 
 div#content {
+        width: 1200px;
         position: relative;
         display: inline-block;
         top: 0;

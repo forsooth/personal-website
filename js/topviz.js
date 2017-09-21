@@ -150,6 +150,9 @@ function front_draw() {
         front_ctx.strokeStyle = 'rgba(135,0,135,1)';
         front_ctx.lineWidth = 1;
         front_ctx.stroke();
+        if (front_colors[i][1] == 0) {
+
+        }
         front_ctx.fillStyle = RGBA(front_colors[i]);
         front_ctx.fill();
     }
