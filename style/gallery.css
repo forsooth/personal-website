@@ -1,6 +1,11 @@
 .gallery {
         border: 5px solid #ffe6ca;
         box-sizing: border-box;
+        float: left;
+        height: 500px;
+        width: 650px;
+        background-color: #807f77;
+        text-align: center;
 }
 
 .gallery-inner {
@@ -30,28 +35,24 @@
 
 .gallery-inner label {
         background-color: #872277;
-        bottom: 10px;
-        border-radius: 100%;
-        cursor: pointer;
-        display: block;
-        height: 25px;
-        width: 25px;
-        left: 0;
-        float: left;
-        text-align: center;
         opacity: 0;
         position: absolute;
-        -webkit-transition: .5s;
-        -moz-transition: .5s;
-        -o-transition: .5s;
-        transition: .5s;
+        transform: rotate(45deg);
+        cursor: pointer;
+        display: block;
+        height: 15px;
+        width: 15px;
+        left: 0;
+        bottom: 10px;
+        float: left;
+        text-align: center;
         visibility: hidden;
+        transition: .1s;
         z-index: 2;
 
 }
 
 .gallery-inner label:after {
-        border-radius: 100%;
         box-shadow: inset 0 0 0 3px #872277,
                     inset 0 3px 3px #872277,
                     0 1px 1px hsla(0, 0%, 100%, .25);
@@ -104,6 +105,22 @@
         left: 375px;
 }.gallery-inner:hover li:nth-child(16) label {
         left: 400px;
+}.gallery-inner:hover li:nth-child(17) label {
+        left: 425px;
+}.gallery-inner:hover li:nth-child(18) label {
+        left: 450px;
+}.gallery-inner:hover li:nth-child(19) label {
+        left: 475px;
+}.gallery-inner:hover li:nth-child(20) label {
+        left: 500px;
+}.gallery-inner:hover li:nth-child(21) label {
+        left: 525px;
+}.gallery-inner:hover li:nth-child(22) label {
+        left: 550px;
+}.gallery-inner:hover li:nth-child(23) label {
+        left: 575px;
+}.gallery-inner:hover li:nth-child(24) label {
+        left: 600px;
 }
 
  /* Images */
@@ -112,10 +129,7 @@
         max-width: 100%;
         max-height: 100%;
         opacity: 0;
-        -webkit-transition: .5s;
-        -moz-transition: .5s;
-        -o-transition: .5s;
-        transition: .5s;
+        transition: .1s;
         visibility: hidden;
         position: relative;
         top: 50%;

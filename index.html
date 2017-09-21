@@ -84,7 +84,7 @@
                                     <input type="radio" id="slide5" name="slide" />
                                     <label for="slide5" rel="desc5">
                                     </label>
-                                    <img src="/images/cudasorts/graph.png" />
+                                    <img src="/images/cuda-sorts/graph.png" />
                                 </li>
                                 <li>
                                     <input type="radio" id="slide6" name="slide" />
@@ -114,7 +114,7 @@
                                     <input type="radio" id="slide10" name="slide" />
                                     <label for="slide10" rel="desc10">
                                     </label>
-                                    <img src="/images/latex-resume/latex.png" />
+                                    <img src="/images/resume-latex/latex.png" />
                                 </li>
                                 <li>
                                     <input type="radio" id="slide11" name="slide" />
@@ -134,47 +134,47 @@
                             <h3>BST Analysis Toolkit</h3>
                             <p>As a final project for Special Topics in Algorithms, Graphs, and Data Structures in spring of 2017, a <a href="https://github.com/uwaces">friend</a> and I created a visualization toolkit and analysis tool for binary search trees. We implemented Red-Black, Splay, AVL, WAVL, and simple BSTs using an API we wrote for interfacing with a tree in a way that records every access, modification, addition, and deletion. This is based on research by John Iacono on the <a href="https://en.wikipedia.org/wiki/Geometry_of_binary_search_trees">geometric interpretation of binary search trees</a>. The project, along with detailed documentation and more disucssion of the theory, can be found on <a href="https://github.com/forsooth/BST-Analysis">GitHub</a>.</p>
                         </div>
-                        <div class="description tab-2 desc2">
+                        <div class="description tab-1 desc2">
                             <h3>SandDial</h3>
                             <p>For a fun week's project over the summer of 2017, and to teach my younger brother programming, we built what we call a Sand Dial &mdash; a clock built from a self-turning hourglass. The basic mechanism is an hourglass stuck to a servo, across from a camera. The camera and motor are both run by a Raspberry Pi. Using OpenCV, we made a tight routine of <code>[thresholding -> Canny edge detection -> edge dilation -> contour separation</code> to find the location of the sand in the image. When no sand is detected in the top of the hourglass, a signal is sent to the servo to flip itself. A video of it in action can be found <a href="https://youtu.be/hL9x73XRZr0">here</a>. My code can be found on GitHub <a href="https://github.com/forsooth/sanddial">here</a> and, for posterity, my brother's can be found <a href="https://github.com/nicasnes/clockified">here</a>.</p>
                         </div>
-                        <div class="description tab-3 desc3">
+                        <div class="description tab-1 desc3">
                             <h3>CardControl</h3>
                             <p>CardControl is a web application for access control in a University system. It was built as a semester project for a Web Engineering class in spring of 2017, with one other <a href="https://github.com/CaerusKaru">friend</a>. It is built on the Angular 2 frontend framework, with a backend of Django, PostgreSQL, NGINX, Varnish, Redis, and AWS. I worked largely on those backend components, while the other student created most of the frontend. I also wrote an API using Tastypie for automated access control. We implemented many server-side infrastructure niceties, like CI through webhooks, simplistic process monitoring, and automated installation of all dependencies. To show off our access control application, we built a second web application (A Piazza clone named Azzaip) on a similar stack which used the API for our system to control which users had access to which site resources. The applications are not running currently (Running multiple AWS instances is expensive for a student!) but I hope to run them off of this site's server eventually, time permitting. Regardless, the code for CardControl can be found <a href="https://github.com/CaerusKaru/cardcontrol">here</a> and for Azzaip <a href="https://github.com/CaerusKaru/azzaip">here</a>.</p>
                         </div>
-                        <div class="description tab-4 desc4">
+                        <div class="description tab-1 desc4">
                             <h3>Turing Machine</h3>
                             <p>For one homework assignment for Tufts' Computational Complexity Theory class in the spring of 2017, we had to write a Turing machine by hand, which the grading staff would then run through an interpreter. I took it upon myself as an independent project after the assignment to write a greatly improved interpreter for the Turing machine's syntax, which is this project. It has three debug modes corresponding to three different UIs, supports step-through debugging, and an animation mode to see the tape change in real time. It is written in Python. More can be found on its GitHub page, which is <a href="https://github.com/forsooth/Turing-Machine">here</a>.</p>
                         </div>
-                        <div class="description tab-5 desc5">
+                        <div class="description tab-1 desc5">
                             <h3>CUDA Sorting</h3>
                             <p>As a final project for my Advanced Computer Architecture class in spring of 2016, two other students and I tested various sorting algorithms both in serial and in parallel. Some of our results are in the diagram to the left, which shows off the difference between a serial and parallel radix sort on integers. The repository can be found <a href="https://github.com/forsooth/CUDA-Sorts">here</a> although, as a disclaimer, some parts of the intended functionality were never implemented, including parallel algorithms for several sorts (concurrency is harder than you'd think!).</p>
                         </div>
-                        <div class="description tab-6 desc6">
+                        <div class="description tab-1 desc6">
                             <h3>Bitshift</h3>
                             <p>Bitshift is a JavaScript web game written in the <a href="https://phaser.io/">Phaser</a> game engine for my game development class in fall of 2015. It follows a beleaguered Tufts computer science student in their attempt to fix a buggy game development project. The game was created with a group of four friends. It can be played online on its <a href="https://johnygall.github.io/Comp23Project1/">project page</a>! It's actually quite fun so I would highly recommend playing it. Repository <a href="https://github.com/JohnyGall/Comp23Project1">here</a>.</p>
                         </div>
-                        <div class="description tab-7 desc7">
+                        <div class="description tab-1 desc7">
                             <h3>This Website</h3>
                             <p>While I'm listing off my projects, I may as well link to the git repository of this website. The Delaunay triangulation floating around in several places is built using <a href="https://github.com/mapbox/delaunator">this</a> wonderfully fast JS library by Mapbox. Everything else was written by me. The repository can be found on GitHub <a href="https://github.com/fosooth/personal-website">here</a>.</p>
                         </div>
-                        <div class="description tab-8 desc8">
+                        <div class="description tab-1 desc8">
                             <h3>UAV Control Panel</h3>
                             <p>This is a project made for one of my classes, Object Oriented Programming for Graphical User Interfaces (it's a mouthful). The project was assigned in progressive stages, and written in Java + Swing. It culminated in a simulator of unmanned aircraft control, including writing my own GUI elements and procedurally generated maps to fly the planes within. All five stages of the assignment are on GitHub.</p>
                         </div>
-                        <div class="description tab-9 desc9">
+                        <div class="description tab-1 desc9">
                             <h3>Album A Day</h3>
                             <p>This was a personal project I did over a few days in the summer of 2015. A friend and I began listening to one album every day, to round out our music knowledge. He made images in Paint, but that seemed like enough work that I wrote a utility to do it &mdash; I also wanted an excuse to write some C++. So the program reads in a list of albums, artists, and dates, and outputs a correct calendar. Album covers are scraped from the web.</p>
                         </div>
-                        <div class="description tab-10 desc10">
+                        <div class="description tab-1 desc10">
                             <h3>Resume</h3>
                             <p>Though for obvious reasons I can't post any homework assignments to show off my LaTeX skills, my resume is on GitHub <a href="https://github.com/forsooth/resume">here</a> and may serve as something of an example.</p>
                         </div>
-                        <div class="description tab-11 desc11">
+                        <div class="description tab-1 desc11">
                             <h3>.bashrc</h3>
                             <p>Though I've been experimenting with <code>zsh</code> and <code>fish</code> recently, my .bashrc configuration is something of a sight to behold at around 900 lines of code. It's on GitHub <a href="https://github.com/forsooth/bashrc">here</a> for now, although I plan to move it into a repository with all of my config files for my <a href="https://www.archlinux.org/">Arch</a> systems into a dotfiles repository whenever I get a free weekend (i.e. maybe in a year or so).</p>
                         </div>
-                        <div class="description tab-12 desc12">
+                        <div class="description tab-1 desc12">
                             <h3>Silver Circuit Website</h3>
                             <p>I created this website in 2013 for my high school robotics team, in addition to programming the robots. It was recently taken down, but it constituted a considerable code base: more than 10,000 lines of HTML, CSS, JavaScript, and PHP.</p>
                         </div>
@@ -183,65 +183,65 @@
                         <div class="gallery">
                             <ul class="gallery-inner">
                                 <li>
-                                    <input type="radio" id="slide5" name="slide" />
-                                    <label for="slide5" rel="desc5">
+                                    <input type="radio" id="slide13" name="slide"  />
+                                    <label for="slide13" rel="desc13">
                                     </label>
                                     <img src="/images/portfolio/hand-drawn-design-1.jpg" />
                                 </li>
                                 <li>
-                                    <input type="radio" id="slide6" name="slide" />
-                                    <label for="slide6" rel="desc6">
+                                    <input type="radio" id="slide14" name="slide" />
+                                    <label for="slide14" rel="desc14">
                                     </label>
                                     <img src="/images/portfolio/tshirt-2.jpg" />
                                 </li>
                                 <li>
-                                    <input type="radio" id="slide7" name="slide" />
-                                    <label for="slide7" rel="desc7">
+                                    <input type="radio" id="slide15" name="slide" />
+                                    <label for="slide15" rel="desc15">
                                     </label>
                                     <img src="/images/portfolio/book-1.jpg" />
                                 </li>
                                 <li>
-                                    <input type="radio" id="slide8" name="slide" />
-                                    <label for="slide8" rel="desc8">
+                                    <input type="radio" id="slide16" name="slide" />
+                                    <label for="slide16" rel="desc16">
                                     </label>
                                     <img src="/images/portfolio/book-2.jpg" />
                                 </li>
                                 <li>
-                                    <input type="radio" id="slide9" name="slide" />
-                                    <label for="slide9" rel="desc9">
+                                    <input type="radio" id="slide17" name="slide" />
+                                    <label for="slide17" rel="desc17">
                                     </label>
                                     <img src="/images/portfolio/map-1.jpg" />
                                 </li>
                                 <li>
-                                    <input type="radio" id="slide10" name="slide" />
-                                    <label for="slide10" rel="desc10">
+                                    <input type="radio" id="slide18" name="slide" />
+                                    <label for="slide18" rel="desc18">
                                     </label>
                                     <img src="/images/portfolio/movie-title-screen-1.jpg" />
                                 </li>
                                 </ul>
 
                         </div>
-                        <div class="description tab-2 desc5">
+                        <div class="description tab-2 desc13">
                             <h3>Purple and Black, Ink on Paper</h3>
                             <p>Given my interest in computers, most art and design work I do is digital. However, I do enjoy actual, physical drawing, especially elaborate and intricate abstract designs.</p> 
                         </div>
-                        <div class="description tab-2 desc6">
+                        <div class="description tab-2 desc14">
                             <h3>Silver Circuit T-Shirt</h3>
                             <p>This was the design for our team's t-shirts for the 2014 competition year. The design was printed on red shirts, and created with Adobe Illustrator. The design is based on the CAD of the robot, and the circular shape in the center was the top view of our robot. The main constraint was the color limits of screen printing, but I think it turned out very well.</p>
                         </div>
-                        <div class="description tab-2 desc7">
+                        <div class="description tab-2 desc15">
                             <h3>Lord of the Rings Book Covers</h3>
                             <p>As a hobby, and to practice design, I like to create book covers. In this case, I was inspired by J.R.R. Tolkien's original cover designs for the series, and vectorized them, also adding personal touches. One interesting challenge in this, though not visible in the cover to the left, was typesetting the Elvish languages on the covers.</p>
                         </div>
-                        <div class="description tab-2 desc8">
+                        <div class="description tab-2 desc16">
                             <h3>Dune Book Cover</h3>
                             <p>Another book cover, this time not a vector but rather a design I particularly liked. Anyone who has read the book should know the thematic significance of a drop of water in the desert, and the color blue. </p>
                         </div>
-                        <div class="description tab-2 desc9">
+                        <div class="description tab-2 desc17">
                             <h3>Westeros Map (Game of Thrones)</h3>
                             <p>As a personal project, I took an interest in cartography. As a first project pursuant to this, and given my annoyance with the lack of high quality fan-made (or official) maps online while reading the books, I created a comprehensive map of the Game of Thrones/A Song of Ice and Fire continent of Westeros. The map is huge, and contains every major or minor location I could find in the books or online.</p>
                         </div>
-                        <div class="description tab-2 desc10">
+                        <div class="description tab-2 desc18">
                             <h3>Arabic Video Project Design</h3>
                             <p>For a video project in my Arabic class, I did a fair amount of design work in the Arabic language, which posed an interesting challenge. Especially given that the audience was mainly comprised of non-native, intermediate-level speakers who needed large, easy to read letters.</p>
                         </div>

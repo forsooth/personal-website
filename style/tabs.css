@@ -19,16 +19,13 @@ ul.tabbed-content li {
         cursor: pointer;
         height: 80px;
         width: 200px;
-
         text-align: center;
         line-height: 80px;
         font-size: 3em;
         font-weight: 200;
-
         overflow: hidden;
         box-sizing: border-box;
         position: relative;
-
         transition: background-color .2s ease-in;
 }
 
@@ -54,15 +51,6 @@ ul.tabbed-content li.active{
 .two-content-columns {
         clear: both;
         width: 100%;
-
-}
-
-.gallery {
-        float: left;
-        height: 500px;
-        width: 650px;
-        background-color: #807f77;
-        text-align: center;
 }
 
 .description {
@@ -85,7 +73,5 @@ ul.tabbed-content li.active{
 .description p {
         font-size: 1em;
         text-align: left;
-        -webkit-hyphens: auto;
-        -moz-hyphens: auto;
         hyphens: auto;
 }
