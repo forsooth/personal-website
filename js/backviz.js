@@ -106,8 +106,8 @@ function RGBA(C) {
 
 /* Register that point 0 should follow the mouse */
 back_canvas.onmousemove = function (e) {
-    back_points[0][0] = (e.layerX);
-    back_points[0][1] = (e.layerY);
+    back_points[0][0] = (e.offsetX);
+    back_points[0][1] = (e.offsetY);
 }
 
 /* Register that the color of the follower point should change when the mouse is clicked */

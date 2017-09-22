@@ -12,6 +12,9 @@ var front_colors = [];
 /* Set the speed at which points travel */
 var front_v = 1;
 
+var mousep = [-1, -1];
+var mousedir = 1;
+
 /* Set the number of points along the sides of and inside of the canvas */
 front_num_w_points = 5;
 front_num_h_points = 1;
@@ -46,14 +49,14 @@ function resizeFrontCanvas() {
     }
 
     // Add new points
-    for (var i = 0; i < front_num_w_points; i++) {
+    for (var i = 0; i <= front_num_w_points; i++) {
         front_points.push([Math.random() * front_w, 0]);
         front_speeds.push([Math.random() * front_v + 1, 0]);
         front_points.push([Math.random() * front_w, front_h]);
         front_speeds.push([Math.random() * front_v + 1, 0]);
     }
 
-    for (var i = 0; i < front_num_h_points; i++) {
+    for (var i = 0; i <= front_num_h_points; i++) {
         front_points.push([0, Math.random() * front_h]);
         front_speeds.push([0, Math.random() * front_v + 1]);
         front_points.push([front_w, Math.random() * front_h]);
@@ -103,15 +106,53 @@ function RGBA(C) {
 
 }
 
+function pdist(p1, p2) {
+    dx = p2[0] - p1[0];
+    dy = p2[1] - p1[1];
+    return Math.sqrt(dx * dx + dy * dy);
+}
+
+function inside(p1, p2) {
+    if (p1[0] < 0 || p1[1] < 0) {
+        return false;
+    } 
+
+    if (p2[0] == 0 || p2[1] == 0 || p2[0] == front_w || p2[1] == front_h) {
+        return false;
+    }
+    D = pdist(p1, p2);
+    return D < 100;
+}
+
+/* Register that point 0 should follow the mouse */
+front_canvas.onmousemove = function (e) {
+    mousep[0] = e.offsetX;
+    mousep[1] = e.offsetY;
+}
+
+/* Register that point 0 should follow the mouse */
+front_canvas.onclick = function (e) {
+    mousedir *= -1;
+}
+
 /* Main function called in draw loop */
 function front_draw() {
     for (var i = 0; i < front_points.length; i++) {
+        
+        if (inside(mousep, front_points[i])) {
+            var dx = front_points[i][0] - mousep[0];
+            var dy = front_points[i][1] - mousep[1];
+
+            front_speeds[i][0] = mousedir * front_v * dx / pdist(mousep, front_points[i]);
+            front_speeds[i][1] = mousedir * front_v * dy / pdist(mousep, front_points[i]);
+        }
         if (front_points[i][0] + front_speeds[i][0] > front_w || front_points[i][0] + front_speeds[i][0] < 0) {
             front_speeds[i][0] *= -1;
-        }
+        } 
         if (front_points[i][1] + front_speeds[i][1] > front_h || front_points[i][1] + front_speeds[i][1] < 0) {
             front_speeds[i][1] *= -1;
         }
+
         front_points[i][0] += front_speeds[i][0];
         front_points[i][1] += front_speeds[i][1];
     }
@@ -145,17 +186,20 @@ function front_draw() {
         front_ctx.lineTo(front_points[i][0], front_points[i][1] + 9);
         front_ctx.lineTo(front_points[i][0] - 9, front_points[i][1]);
         front_ctx.lineTo(front_points[i][0], front_points[i][1] - 9);
-        //front_ctx.rect(front_points[i][0] - 7, front_points[i][1] - 7, 14, 14);
         front_ctx.closePath();
         front_ctx.strokeStyle = 'rgba(135,0,135,1)';
         front_ctx.lineWidth = 1;
         front_ctx.stroke();
-        if (front_colors[i][1] == 0) {
-
-        }
         front_ctx.fillStyle = RGBA(front_colors[i]);
         front_ctx.fill();
     }
+
+    front_ctx.beginPath();
+    front_ctx.arc(mousep[0], mousep[1], 100, 0, 2 * Math.PI);
+    front_ctx.closePath();
+    front_ctx.strokeStyle = 'rgba(135,0,135,1)';
+    front_ctx.lineWidth = 1;
+    front_ctx.stroke();
 }
 
 /* Register the request for draw to be called repeatedly */
