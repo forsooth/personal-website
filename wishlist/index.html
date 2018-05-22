@@ -1,0 +1,165 @@
+<html lang=en-US>
+<head>
+    <title>Matt Asnes's Digital Portfolio</title>
+    <link rel="stylesheet" href="/style/main.css" />
+    <link rel="stylesheet" href="/style/nav.css" />
+    <link rel="stylesheet" href="/style/hello.css" />
+    <link rel="stylesheet" href="/style/tabs.css" />
+    <link rel="stylesheet" href="/style/gallery.css" />
+    <link rel="stylesheet" href="/style/footer.css" />
+</head>
+
+<body onresize="resizeBackCanvas(event);">
+    <div id="main">
+        <canvas id="graph-canvas-large"></canvas>
+        <div id="middle-column">
+            <header id="top-bar">
+                <div id="logo-graph">
+                    <canvas id="graph-canvas-small"></canvas>
+                </div>
+                <a href="/"><div class="logo"></div></a>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-element" style="background-color: rgba(255, 238, 202, 0.75)">
+                            <a href="/" style="background-color: #ffd887">Home</a>
+                        </li>
+                        <li class="nav-element" style="background-color: rgba(255, 230, 202, 0.75)">
+                            <a href="/about/" style="background-color: #ffc687">About</a>
+                        </li>
+                        <li class="nav-element" style="background-color: rgba(255, 216, 202, 0.75)">
+                            <a href="/resume/" style="background-color: #ffae87">Resume</a>
+                        </li>
+                        <li class="nav-element" style="background-color: rgba(255, 202, 202, 0.75)">
+                            <a href="https://github.com/forsooth" style="background-color: #ff8787">GitHub</a>
+                        </li>
+                        <li class="nav-element" style="background-color: rgba(255, 202, 216, 0.75)">
+                            <a href="/blog/" style="background-color: #ff87ae">Blog</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="content">
+                <div class="hello">
+                        <span>Wishlist</span>
+                </div>
+                <h3>Computers &amp; Games</h3>
+                    <ul>
+                        <li>NVidia 1080 or 1080 Ti graphics card<a href="https://pcpartpicker.com/product/ymrcCJ/asus-geforce-gtx-1080-8gb-video-card-turbo-gtx1080-8g">(1)</a><a href="https://pcpartpicker.com/product/7xKhP6/msi-geforce-gtx-1080-ti-11gb-armor-video-card-geforce-gtx-1080-ti-armor-11g-oc">(2)</a><a href="https://pcpartpicker.com/product/gwJkcf/evga-geforce-gtx-1080-ti-11gb-sc-black-edition-video-card-11g-p4-6393-kr">(3)</a></li>
+                        <li>Nintendo Switch<a href="https://smile.amazon.com/gp/product/B01MUAGZ49/ref=s9_acsd_hps_bw_c_x_2_w?th=1">(1)</a></li>
+                        <li>Xbox One controller<a href="https://www.xbox.com/en-US/xbox-one/accessories/controllers/xbox-black-wireless-controller">(1)</a></li>
+                    </ul>
+                <h3>Hobbyist Electronics</h3>
+                    <ul>
+                        <li>EspoTek Labrador Oscilloscope lab board<a href="http://espotek.com/labrador/product/espotek-labrador-board/">(1)</a></li>
+                        <li>OpenScope MZ Oscilloscope lab board<a href="https://store.digilentinc.com/openscope-mz-open-source-all-in-one-instrumentation/">(1)</a></li>
+                        <li>Blue >1W laser<a href="http://www.wickedlasers.com/arctic">(1)</a></li>
+                        <li>Laser safety goggles<a href="https://smile.amazon.com/Violet-Laser-Protection-Goggles-Glasses/dp/B01M6Z55CQ?sa-no-redirect=1">(1)</a></li>
+                        <li>Flex sensor<a href="https://www.adafruit.com/product/1070">(1)</a></li>
+                        <li>Ultrasound rangefinder sensors<a href="https://www.adafruit.com/product/172">(1)</a></li>
+                        <li>32x32 LED panels (x4)<a href="https://www.adafruit.com/product/2026">(1)</a></li>
+                        <li>MQ-5 gas sensor<a href="https://www.waveshare.com/mq-5-gas-sensor.htm">(1)</a></li>
+                        <li>9 or 10 dof IMU<a href="https://www.adafruit.com/product/1604">(1)</a><a href="https://www.adafruit.com/product/2472">(2)</a></li>
+                        <li>Good soldering iron<a href="https://www.adafruit.com/product/2163">(1)</a></li>
+                    </ul>
+                <h3>Art Supplies</h3>
+                    <ul>
+                        <li>Wacom drawing tablet<a href="https://www.wacom.com/en-es/products/pen-displays/cintiq-22-hd-touch">(1)</a></li>
+                    </ul>
+                <h3>Arts &amp; Crafts</h3>
+                    <ul>
+                        <li>Cobiz hot glue gun<a href="https://www.amazon.com/Cobiz-Premium-Sticks-Christmas-Decoration/dp/B0721PTD5B?SubscriptionId=AKIAINYWQL7SPW7D7JCA&tag=aboutcom02thesprucecrafts-20&linkCode=sp1&camp=2025&creative=165953&creativeASIN=B0721PTD5B&ascsubtag=4154207%7Cgoogle.com%7C%7C%7C%7C1%7C">(1)</a></li>
+                        <li>Travel sewing kit<a href="https://smile.amazon.com/Singer-Beginners-Sewing-Pink-Black/dp/B000GBTA7C/ref=sr_1_3?ie=UTF8&qid=1527019306&sr=8-3&keywords=sewing+kit+singer&dpID=511e6Tm5S7L&preST=_SY300_QL70_&dpSrc=srch">(1)</a></li>
+                        <li>Singer sewing machine<a href="https://www.amazon.com/gp/product/B003VWXZQ0/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=sewing04b0b-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B003VWXZQ0&linkId=a38b64193df265f1c7af855260c2b2d5">(1)</a></li>
+                        <li>Button making supplies restock<a href="https://www.americanbuttonmachines.com/collections/button-supplies-1/products/1-5-pinback-button-set?variant=19694930179">(1)</a></li>
+                         <li>Scratch-off map<a href="https://smile.amazon.com/Luckies-London-Scratch-Map-LUSCR/dp/B003NCIPS6/ref%3Dsr_1_2?ie=UTF8&qid=1371675505&sr=8-2&keywords=scratch+map&sa-no-redirect=1">(1)</a></li>
+                         <li>LEGO Ship in a Bottle<a href="https://shop.lego.com/en-US/Ship-in-a-Bottle-21313">(1)</a></li>
+                        <li>LEGO Sisyphus<a href="https://www.mochub.com/moc/sisyphus-automata-motorized">(1)</a></li>
+                    </ul>
+                <h3>Headphones</h3>
+                    <ul>
+                        <li>Sennheiser HD 630VB<a href="https://en-us.sennheiser.com/high-quality-stereo-headphones-around-ear-hd-630vb">(1)</a></li>
+                        <li>Massdrop x Fostex headphones<a href="https://www.massdrop.com/buy/fostex-x-massdrop-th-x00-purpleheart-headphones">(1)</a><a href="https://www.massdrop.com/buy/fostex-x-massdrop-th-x00">(2)</a><a href="https://www.massdrop.com/buy/massdrop-x-fostex-th-x00-ebony-headphones">(3)</a></li>
+                    </ul>
+                <h3>Roleplaying Games</h3>
+                    <ul>
+                        <li>Q-workshop green forest dice<a href="https://q-workshop.com/en/rpg-sets/440/green-black-forest-dice-set-forest-dice">(1)</a></li>
+                    </ul>
+                <h3>A New Hobby</h3>
+                    <ul>
+                        <li>High quality 3D printer<a href="https://store.makerbot.com/printers/replicator/">(1)</a><a href="https://formlabs.com/store/us/form-2/buy-printer/">(2)</a></li>
+                        <li>Screen printing starter kit<a href="https://www.screenprinting.com/diy-print-4-color-shop-t-shirt-kit#.VUtxUxDF8nh">(1)</a><a href="https://www.screenprinting.com/semi-pro-4-color-screen-printing-kit_2#.VUtxUxDF8nh">(2)</a></li>
+                    </ul>
+                <h3>Vinyl Records</h3>
+                    <ul>
+                        <li>Hospice<a href="https://smile.amazon.com/Hospice-Vinyl-Antlers/dp/B002GYKTQS?sa-no-redirect=1">(1)</a></li>
+                        <li>Burst Apart<a href="https://smile.amazon.com/Burst-Apart-Antlers/dp/B004UHF5V8/ref=pd_lpo_sbs_15_img_0?_encoding=UTF8&psc=1&refRID=EC4TQJXS6SGYRJ6X5EAG">(1)</a></li>
+                        <li>Slow Riot for New Zero Kanada<a href="https://smile.amazon.com/Slow-Riot-Zero-Kanada-Vinyl/dp/B00004WORQ?sa-no-redirect=1">(1)</a></li>
+                        <li>The Glow Pt. 2<a href="https://smile.amazon.com/Glow-Pt-2-Vinyl/dp/B0014DCT8I?sa-no-redirect=1">(1)</a></li>
+                        <li>Ganglion<a href="https://smile.amazon.com/Ganglion-Limited-VINYL-Saltillo/dp/B00L4NT2HY/ref=tmm_vnl_swatch_0?_encoding=UTF8&qid=&sr=">(1)</a></li>
+                        <li>Teens of Denial<a href="https://smile.amazon.com/Teens-Denial-Car-Seat-Headrest/dp/B01G454YV0?sa-no-redirect=1">(1)</a></li>
+                        <li>Twin Fantasy<a href="https://smile.amazon.com/Twin-Fantasy-Car-Seat-Headrest/dp/B0789TBY58/ref=tmm_vnl_swatch_0?_encoding=UTF8&qid=&sr=">(1)</a></li>
+                        <li>( )<a href="https://smile.amazon.com/SIGUR-ROS/dp/B00QN2OKSW/ref=tmm_vnl_swatch_0?_encoding=UTF8&qid=1527021921&sr=1-2">(1)</a></li>
+                        <li>Kid A<a href="https://smile.amazon.com/Kid-2xLP-Radiohead/dp/B01I2E32W8/ref=ice_ac_b_dpb_twi_lp__1?s=music&ie=UTF8&qid=1527021941&sr=1-2&keywords=kids+vinyl&dpID=619Ir7ktNkL&preST=_SY300_QL70_&dpSrc=srch">(1)</a></li>
+                        <li>High Violet<a href="https://smile.amazon.com/High-Violet-Vinyl-National/dp/B003BKF6AU/ref=sr_1_1?s=music&ie=UTF8&qid=1527021966&sr=1-1&keywords=high+violet+vinyl&dpID=61tlj5zEDHL&preST=_SY300_QL70_&dpSrc=srch">(1)</a></li>
+                        <li>Boxer<a href="https://smile.amazon.com/BOXER-Vinyl-NATIONAL/dp/B000O5AYC0/ref=sr_1_1?s=music&ie=UTF8&qid=1527021993&sr=1-1&keywords=boxer+vinyl&dpID=515o5ahjm5L&preST=_SY300_QL70_&dpSrc=srch">(1)</a></li>
+                        <li>Cherry Tree<a href="https://smile.amazon.com/Cherry-Tree-National/dp/B004YKB53S/ref=sr_1_1?s=music&ie=UTF8&qid=1527021977&sr=1-1&keywords=cherry+tree+vinyl&dpID=51RRn9L8FjL&preST=_SY300_QL70_&dpSrc=srch">(1)</a></li>
+                        <li>In the Aeroplane Over the Sea<a href="https://smile.amazon.com/Aeroplane-Over-Neutral-Milk-Hotel/dp/B002PHVHFI/ref=sr_1_1?s=music&ie=UTF8&qid=1527022004&sr=1-1&keywords=In+the+Aeroplane+Over+the+Sea+vinyl&dpID=61z%252BBBE0lPL&preST=_SY300_QL70_&dpSrc=srch">(1)</a></li>
+                        <li>Pinkerton<a href="https://smile.amazon.com/Pinkerton-Weezer/dp/B01L2ZS882/ref=sr_1_1?s=music&ie=UTF8&qid=1527022013&sr=1-1&keywords=Pinkerton+vinyl&dpID=51WV-hglV%252BL&preST=_SY300_QL70_&dpSrc=srch">(1)</a></li>
+                        <li>The Devil and God Are Raging Inside Me<a href="https://smile.amazon.com/Brand-New-Devil-Raging-Inside/dp/B00EZWSYMK/ref=sr_1_1?s=music&ie=UTF8&qid=1527022022&sr=1-1&keywords=The+Devil+and+God+Are+Raging+Inside+Me+vinyl&dpID=51DmU7PXjQL&preST=_SY300_QL70_&dpSrc=srch">(1)</a></li>
+                        <li>Carrie and Lowell<a href="https://smile.amazon.com/Carrie-Lowell-Sufjan-Stevens/dp/B00S24RT3C/ref=sr_1_1?s=music&ie=UTF8&qid=1527022032&sr=1-1&keywords=Carrie+and+Lowell+vinyl&dpID=514g9Rm-aTL&preST=_SY300_QL70_&dpSrc=srch">(1)</a></li>
+                        <li>Is This It MOVLP085 <a href="https://www.ebay.com/p/The-Strokes-Is-This-It-LP-Vinyl-180gm-IMPORT-Movlp085/1500029942">(1)</a></li>
+                        <li>Have One on Me<a href="https://smile.amazon.com/Have-One-Vinyl-Joanna-Newsom/dp/B0034C26CG/ref=sr_1_1?s=music&ie=UTF8&qid=1527022050&sr=1-1&keywords=Have+One+on+Me+vinyl">(1)</a></li>
+                        <li>Get Disowned<a href="https://smile.amazon.com/Get-Disowned-Vinyl-Download-Card/dp/B01ACQ6R3K/ref=sr_1_1?s=music&ie=UTF8&qid=1527022058&sr=1-1&keywords=Get+Disowned+vinyl&dpID=617lbSzY7hL&preST=_SY300_QL70_&dpSrc=srch">(1)</a></li>
+                    </ul>
+                <h3>Posters</h3>
+                    <ul>
+                        <li>Harry Potter 1<a href="https://smile.amazon.com/Harry-Potter-Sorcerers-Stone-Regular/dp/B0016D6UH2?sa-no-redirect=1">(1)</a></li>
+                        <li>Full book text posters<a href="https://www.litographs.com/collections/posters/products/sabriel">(1)</a></li>
+                    </ul>
+                <h3>T-Shirts &amp; Clothing</h3>
+                    <ul>
+                        <li>Merlin Yoxall wax jacket<a href="https://www.revzilla.com/motorcycle/merlin-yoxall-wax-jacket">(1)</a></li>
+                        <li>Joy Division shirt-shirt<a href="https://www.redbubble.com/people/revnandi/works/11040824-joy-division-t-shirt-tee?grid_pos=15&p=t-shirt&rbs=7fcf3157-9b85-4f10-93a9-8d4e115a3563&ref=shop_grid&style=mens">(1)</a></li>
+                        <li>Solo Jazz<a href="https://smile.amazon.com/BZBFSKY-Paper-Print-Casual-T-Shirt/dp/B01I01WOMW?sa-no-redirect=1">(1)</a></li>
+                        <li>D.A.R.E.<a href="https://www.amazon.com/Officially-Licensed-Classic-Graduation-Shirt/dp/B07CH2TQPG/ref=pd_lpo_vtph_193_bs_tr_img_1?_encoding=UTF8&refRID=QHVA3E4BG58K9VSTJVW7">(1)</a></li>
+                        <li>Hop Along Get Disowned (green shirt with full body image)<a href="https://f4.bcbits.com/img/a0868243390_10.jpg">(1)</a></li>
+                        <li>Several shirts from bands<a href="https://store.matadorrecords.com/turn-out-the-lights-shirt">(1)</a><a href="https://saddle-creek.com/collections/apparel/products/leaves?variant=35090529421">(2)</a><a href="https://saddle-creek.com/collections/apparel/products/organ?variant=25849008577">(3)</a></li>
+                        <li>Bridgeburners (my art)<a href="https://www.dropbox.com/s/wfahecsx1dpiwhu/bridgeburners.png?dl=0">(1)</a></li>
+                        <li>LaTeX logo<a href="https://i.stack.imgur.com/zHFFO.png">(1)</a></li>
+                        <li>Spiritomb<a href="https://www.redbubble.com/fr/people/alexnk/works/23730187-spiritomg?p=t-shirt&style=mens&body_color=eggplant&print_location=front">(1)</a></li>
+                    </ul>
+                <h3>Patches</h3>
+                    <ul>
+                        <li>Adafruit iron-on tech patches<a href="https://www.adafruit.com/product/479">(1)</a><a href="https://www.adafruit.com/product/507">(2)</a><a href="https://www.adafruit.com/product/750">(3)</a></li>
+                    </ul>
+                <h3>Keys &amp; EDC</h3>
+                    <ul>
+                        <li>NFC/RFID ring<a href="https://www.adafruit.com/product/2803">(1)</a></li>
+                        <li>SouthOrd Jackknife set<a href="https://www.southord.com/products/jackknife-pocket-lock-pick-sets">(1)</a></li>
+
+                    </ul>
+                <h3>Watches</h3>
+                    <ul>
+                        <li>Ventus Watches Mori Diver<a href="https://ventuswatches.com/collections/mori-diver">(1)</a></li>
+                        <li>Tourbillon watch<a href="http://www.swisstime.ch/en-watches-CABESTAN-Triple-Axis-Tourbillon-p3341.html">(1)</a></li>
+                    </ul>
+            </div>
+
+            <div class="footer">
+                <div class="little-color goldenrod"></div>
+                <div class="little-color peach"></div>
+                <div class="little-color orange-red"></div>
+                <div class="little-color red"></div>
+                <div class="little-color pink"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/nav-bar-tracking.js"></script>
+    <script src="/js/tab-switching.js"></script>
+    <script>var module = {};</script>
+    <script src="/js/delaunator.js"></script>
+    <script src="/js/backviz.js"></script>
+    <script src="/js/topviz.js"></script>
+</body>
+</html>
