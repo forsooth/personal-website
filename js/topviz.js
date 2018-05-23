@@ -92,7 +92,7 @@ for (var i = 0; i < front_points.length; i++) {
 }
 
 /* Average 3 RGBA colors, to get the color that a triangle should be inside */
-function avgRGBA3(C1, C2, C3) {
+function front_avgRGBA3(C1, C2, C3) {
     R = Math.floor((C1[0] + C2[0] + C3[0]) / 3);
     G = Math.floor((C1[1] + C2[1] + C3[1]) / 3);
     B = Math.floor((C1[2] + C2[2] + C3[2]) / 3);
@@ -101,7 +101,7 @@ function avgRGBA3(C1, C2, C3) {
 }
 
 /* Convert an array of 4 elements to an RGBA value formatted as expected by the canvas */
-function RGBA(C) {
+function front_RGBA(C) {
     return "rgba(" + C[0] + ", " + C[1] + ", " + C[2] + ", " + C[3] + ")";
 
 }
@@ -176,7 +176,7 @@ function front_draw() {
         front_ctx.strokeStyle = 'rgba(190, 135, 170, 1)';
         front_ctx.lineWidth = 1;
         front_ctx.stroke();
-        front_ctx.fillStyle = avgRGBA3(front_colors[p0], front_colors[p1], front_colors[p2]);
+        front_ctx.fillStyle = front_avgRGBA3(front_colors[p0], front_colors[p1], front_colors[p2]);
         front_ctx.fill();
     }
 
@@ -190,7 +190,7 @@ function front_draw() {
         front_ctx.strokeStyle = 'rgba(135,0,135,1)';
         front_ctx.lineWidth = 1;
         front_ctx.stroke();
-        front_ctx.fillStyle = RGBA(front_colors[i]);
+        front_ctx.fillStyle = front_RGBA(front_colors[i]);
         front_ctx.fill();
     }
 
@@ -201,6 +201,7 @@ function front_draw() {
     front_ctx.lineWidth = 1;
     front_ctx.stroke();
 }
+
 
 /* Register the request for draw to be called repeatedly */
 function front_frame() {

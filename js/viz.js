@@ -174,16 +174,6 @@ function draw() {
         ctx.fillStyle = avgRGBA3(colors[p0], colors[p1], colors[p2]);
         ctx.fill();
     }
-    
-    // for (var i = 0; i < points.length; i++) {
-    //     ctx.beginPath();
-    //     ctx.rect(getX(i) - 1.5, getY(i) - 1.5, 3, 3);
-    //     ctx.closePath();
-    //     ctx.strokeStyle = 'rgba(0,0,0,1)';
-    //     ctx.lineWidth = 1;
-    //     ctx.stroke();
-    //     ctx.fillStyle = RGBA(colors[i]);
-    //     ctx.fill();
-    // }
+
 }
 
