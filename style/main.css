@@ -6,6 +6,12 @@
         background: #ffff00;
 }
 
+::-moz-selection {
+        color: #3e3e3e;
+        background: #ffff00;
+}
+
+
 html {
         min-height: 100%;
         max-height: 100%;
